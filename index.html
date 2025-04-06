@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comment Section</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab(event, 'thoughts')">Thoughts(25)</div>
+      <div class="tab" onclick="switchTab(event, 'holders')">Top Holders</div>
+      <div class="tab" onclick="switchTab(event, 'activity')">Activity</div>
+    </div>
+
+    <div class="tab-content" id="thoughts">
+      <!-- Name input -->
+      <div class="add-comment">
+        <input type="text" id="nameInput" placeholder="Your name..." />
+      </div>
+      <!-- Comment input -->
+      <div class="add-comment">
+        <input type="text" id="commentInput" placeholder="Add a comment..." />
+        <button onclick="addComment()">Post</button>
+      </div>
+
+      <div id="commentsSection">
+        <!-- Comments will load here -->
+      </div>
+    </div>
+
+    <div class="tab-content" id="holders" style="display:none;">
+      <p>Top holders content (placeholder)</p>
+    </div>
+
+    <div class="tab-content" id="activity" style="display:none;">
+      <p>Activity content (placeholder)</p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
